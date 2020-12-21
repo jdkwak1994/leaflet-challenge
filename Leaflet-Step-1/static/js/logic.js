@@ -36,6 +36,20 @@ function createFeatures(earthquakeData) {
   var earthquakes = L.geoJSON(earthquakeData, {
     onEachFeature: onEachFeature
   });
+  
+  var magnitude = [];
+  var latlong = [];
+  data.forEach((earthquakeData) => {
+    magnitude.push(earthquakeData.properties.mag * 10000);
+    latlong.push(earthquakeData.geometry.coordinates);
+  });
+
+  var i;
+  for (i = 1; i < earthquakeData.length; i++) {
+    L.circle(latlong[i], {
+      radius: magnitude[i]
+    }).addTo(myMap);
+  };
 
   createMap(earthquakes);
 
