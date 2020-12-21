@@ -21,4 +21,4 @@ Your task is to visualize an earthquake data set.
    * Create a legend that will provide context for your map data.
    * Your visualization should look something like the map above.
 
-# ASSESSMENT IS INCOMPLETE
+# ASSESSMENT IS NOT FULLY COMPLETE
